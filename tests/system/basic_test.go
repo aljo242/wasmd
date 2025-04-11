@@ -109,7 +109,7 @@ func TestMultiContract(t *testing.T) {
 	// check balances
 	assert.Equal(t, int64(100), cli.QueryBalance(reflectContractAddr, "stake"))
 	assert.Equal(t, int64(50), cli.QueryBalance(hackatomContractAddr, "stake"))
-	assert.Equal(t, int64(0), cli.QueryBalance(bobAddr, "stake"))
+	assert.Equal(t, int64(0), cli.QueryBalance(gbobAddr, "stake"))
 
 	// now for the trick.... we reflect a message through the reflect to call the escrow
 	// we also send an additional 20stake tokens there.
